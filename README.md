@@ -43,6 +43,12 @@ Push the encoder button to cycle through options, then push at the end to write 
   * Send LMB on morse press
   * Read key from flash and send the key on morse press
   * Send end character after delay
+* Buzzer (straight key only, stretch goal):
+  * Try an active buzzer on key 1 with a switch to pull it out of the circuit
+  * Refer to shakir-abdo/CH32V003j4m6-BUZZER to sound a passive buzzer on key down
+  * Add buzzer modes (HID, HID+buzzer, buzzer only)
+  * Add interface to the display to use the rotary controller to select passive buzzer frequency and mode
+  * Save frequency to EEPROM
 * Finalize/package the hardware
 * Make a case
 
@@ -55,9 +61,10 @@ Push the encoder button to cycle through options, then push at the end to write 
  * PD3 - USB D-
  * PC2 - Display SCL
  * PC1 - Display SDA
- * PC4 - Rotary button
+ * PC3 - Rotary button
  * PA2 - Rotary A
  * PA1 - Rotary B
  * PD5 - Key 1
  * PD6 - Key 2
  * PD7 - LED
+ * PC4 - Passive Buzzer (maybe?)
