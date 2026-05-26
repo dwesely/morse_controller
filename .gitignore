@@ -1,1 +1,7 @@
 /external
+morse_controller.bin
+morse_controller.elf
+morse_controller.hex
+morse_controller.lst
+morse_controller.map
+morse_controller_ext.bin

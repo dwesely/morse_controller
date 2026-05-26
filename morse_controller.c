@@ -11,6 +11,10 @@
 #include "ssd1306_i2c.h"
 #include "ssd1306.h"
 
+
+#define PIN_LED PC7
+
+
 void display_current_settings(int row)
 {
 	if(row==0)
@@ -45,9 +49,46 @@ void config_mode()
 
 int main()
 {
+	
+	SystemInit();
+
+	funGpioInitAll(); // Enable GPIOs
+	
+	funPinMode( PIN_LED,     GPIO_Speed_10MHz | GPIO_CNF_OUT_PP ); // Set PIN_LED to output
+
+
+	funDigitalWrite( PIN_LED, FUN_HIGH ); // Turn on PIN_LED
+	Delay_Ms( 500 );
+	funDigitalWrite( PIN_LED,     FUN_LOW );  // Turn off PIN_LED
+
 	// initialize HID using saved values (or defaults for first boot)
 	
 	// display current settings and time out after X seconds
+
+	// init i2c and oled
+	Delay_Ms( 100 );	// give OLED some more time
+	printf("initializing i2c oled...");
+
+	if(!ssd1306_i2c_init())
+	{
+		ssd1306_init();
+		printf("done.\n\r");
+		
+		ssd1306_setbuf(0);
+
+		ssd1306_drawstr_sz(8,0, "Key1: [Space]", 1, fontsize_8x8);
+		ssd1306_drawstr_sz(8,8, "Key2: ", 1, fontsize_8x8);
+		ssd1306_drawstr_sz(8,16, "End: E", 1, fontsize_8x8);
+		ssd1306_drawstr_sz(8,24, "End Delay: 100ms", 1, fontsize_8x8);
+		ssd1306_drawstr_sz(0,0, ">", 1, fontsize_8x8);
+
+		ssd1306_refresh();
+	
+		Delay_Ms(2000);
+		ssd1306_setbuf(0);
+	}
+	else
+		printf("failed.\n\r");
 	
 	// listen for HID requests
 	

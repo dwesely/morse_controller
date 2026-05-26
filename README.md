@@ -31,9 +31,9 @@ Push the encoder button to cycle through options, then push at the end to write 
   * ADBeta/CH32V00x_lib_i2c
   * shakir-abdo/ch32v003-eeprom
   * shakir-abdo/CH32V003j4m6-BUZZER
-  * Blink using the new project
+  * Blink using the new project (done)
 * OLED development:
-  * Display 4 lines of text with space for a cursor
+  * Display 4 lines of text with space for a cursor (done)
   * Display cursor shape at the start of each line, behind a switch..case
   * Turn off display on timeout
 * Rotary input:
