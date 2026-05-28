@@ -34,7 +34,7 @@ Push the encoder button to cycle through options, then push at the end to write 
   * Blink using the new project (done)
 * OLED development:
   * Display 4 lines of text with space for a cursor (done)
-  * Display cursor shape at the start of each line, behind a switch..case
+  * Display cursor shape at the start of each line, in a function (done)
   * Turn off display on timeout
 * Rotary input:
   * Turn on display on rotary press
@@ -77,5 +77,5 @@ Push the encoder button to cycle through options, then push at the end to write 
  * PA1 - Rotary B
  * PD5 - Key 1
  * PD6 - Key 2
- * PD7 - LED
+ * PC7 - LED
  * PC4 - Passive Buzzer (maybe?)
