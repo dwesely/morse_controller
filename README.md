@@ -7,15 +7,24 @@ This is an updated replacement for [submorse_controller](https://github.com/dwes
 
 ## Components:
 
-OLED/rotary encoder
+* CH32v003 dev board (https://github.com/ADBeta/CH32V003_Breakout_Boards)
+* 0.91" OLED display ( 128X32 resolution, I2C interface)
+* Rotary encoder
+* PJ-313 audio jack
+* Morse key
+
+## Operation:
+
 Push encoder: enter program mode
+
 Cycle through 4 settings:
 * Key1: default space bar, then LMB, RMB, common keys
 * Key2: default empty, then space bar, LMB, RMB, common keys
 * End: default empty, then E, then common ends
 * End Delay: speed in wpm, where delay until end is 7*1.2/[wpm] seconds (empty if End is empty)
-Push the encoder button to cycle through options, then push at the end to write the values and reset the device (setting up the key)
+Push the encoder button to confirm a setting and move to next setting, then push at the end to write the values and reset the device (setting up the key)
 
+Plug the morse key into the device, and press the morse key to trigger the key press events.
 
 ## Development for V2:
 
