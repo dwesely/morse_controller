@@ -3,7 +3,7 @@ USB morse key adapter based on the CH32v003
 
 Plug your morse key (straight key or paddle), and the device acts as a keyboard and/or a mouse to send keypresses or mouse presses to a PC. This allows a real morse key to be used as a controller for a variety of morse code games/programs.
 
-This is an updated replacement for dwesely/submorse_controller. This adds a display and rotary encoder to let the user select from a wide variety of key options instead of just using physical toggle switches.
+This is an updated replacement for [submorse_controller](https://github.com/dwesely/submorse_controller). This adds a display and rotary encoder to let the user select from a wide variety of key options instead of just using physical toggle switches. The goal is to make a device usable for many different [morse trainers](https://docs.google.com/spreadsheets/d/1NgTxJTo4dAythpHvHk8G_OuLiSbL9fOsmyYwQumHkDQ).
 
 ## Components:
 
